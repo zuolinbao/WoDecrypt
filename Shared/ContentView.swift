@@ -9,8 +9,8 @@ import SwiftUI
 import CryptoSwift
 
 struct ContentView: View {
-    @State private var upText = "DdsAnGrve3IWVFsZYdgRik+pZrFE6HSKC3HcRWhG4BY="
-    @State private var key = "39b0ffab-67ee-40e1-8453-cf3118dd0ac6"
+    @State private var upText = ""
+    @State private var key = ""
     @State private var iv = "wNSOYIB1k1DjY5lA"
     @State private var downText = ""
     
@@ -23,23 +23,26 @@ struct ContentView: View {
             
             HStack {
                 Text("偏移量(iv)").frame(width: 100)
-                TextField("", text: $iv).cornerRadius(10)
+                TextField("", text: $iv).cornerRadius(8)
             }
+            
+            Spacer()
             
             HStack {
                 Text("密钥(key)").frame(width: 100)
-                TextEditor(text: $key)
-                    .frame(height:60)
-                    .cornerRadius(10)
+                VStack {
+                    TextEditor(text: $key)
+                }.padding(.all, 5).background(Color.white).frame(height:40).cornerRadius(8)
+                
             }
             
-            
+            Spacer()
             
             HStack {
                 Text("密文").frame(width: 100)
-                TextEditor(text: $upText)
-                    .frame(height:150)
-                    .cornerRadius(10)
+                VStack {
+                    TextEditor(text: $upText)
+                }.padding(.all, 5).background(Color.white).frame(height:80).cornerRadius(8)
             }
             
             HStack {
@@ -77,12 +80,11 @@ struct ContentView: View {
             
             HStack {
                 Text("明文").frame(width: 100)
-                TextEditor(text: $downText)
-                    .frame(height:150)
-                    .cornerRadius(10)
+                VStack {
+                    TextEditor(text: $downText)
+                }.padding(.all, 5).background(Color.white).frame(height:80).cornerRadius(8)
             }
             
-
             
             Spacer()
 
