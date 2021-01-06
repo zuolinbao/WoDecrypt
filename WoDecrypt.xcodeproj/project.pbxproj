@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD37D19325A442770078CACA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD37D19225A442770078CACA /* CryptoSwift */; };
+		CD37D1BB25A47A810078CACA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD37D1BA25A47A810078CACA /* CryptoSwift */; };
 		CD4FE28725947603009BC46D /* WoDecryptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27425947601009BC46D /* WoDecryptApp.swift */; };
 		CD4FE28825947603009BC46D /* WoDecryptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27425947601009BC46D /* WoDecryptApp.swift */; };
 		CD4FE28925947603009BC46D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27525947601009BC46D /* ContentView.swift */; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD37D19325A442770078CACA /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,12 +41,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD37D1BB25A47A810078CACA /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD37D1B925A47A810078CACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD4FE26E25947601009BC46D = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +62,7 @@
 				CD4FE27D25947603009BC46D /* iOS */,
 				CD4FE28425947603009BC46D /* macOS */,
 				CD4FE27C25947603009BC46D /* Products */,
+				CD37D1B925A47A810078CACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +118,9 @@
 			dependencies = (
 			);
 			name = "WoDecrypt (iOS)";
+			packageProductDependencies = (
+				CD37D19225A442770078CACA /* CryptoSwift */,
+			);
 			productName = "WoDecrypt (iOS)";
 			productReference = CD4FE27B25947603009BC46D /* WoDecrypt.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +138,9 @@
 			dependencies = (
 			);
 			name = "WoDecrypt (macOS)";
+			packageProductDependencies = (
+				CD37D1BA25A47A810078CACA /* CryptoSwift */,
+			);
 			productName = "WoDecrypt (macOS)";
 			productReference = CD4FE28325947603009BC46D /* WoDecrypt.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +171,9 @@
 				Base,
 			);
 			mainGroup = CD4FE26E25947601009BC46D;
+			packageReferences = (
+				CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = CD4FE27C25947603009BC46D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,7 +341,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9K38JFUWLB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -328,8 +351,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Wo.WoDecrypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinaunicom.test.WoApp;
 				PRODUCT_NAME = WoDecrypt;
+				PROVISIONING_PROFILE_SPECIFIER = com.chinaunicom.test.WoApp_dev;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,7 +365,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9K38JFUWLB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -349,8 +375,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Wo.WoDecrypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinaunicom.test.WoApp;
 				PRODUCT_NAME = WoDecrypt;
+				PROVISIONING_PROFILE_SPECIFIER = com.chinaunicom.test.WoApp_inhouse;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,8 +391,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QKYGFQNTZQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,8 +402,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wo.WoDecrypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinaunicom.test.WoApp;
 				PRODUCT_NAME = WoDecrypt;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -386,8 +416,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QKYGFQNTZQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,8 +427,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wo.WoDecrypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinaunicom.test.WoApp;
 				PRODUCT_NAME = WoDecrypt;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -433,6 +466,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD37D19225A442770078CACA /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		CD37D1BA25A47A810078CACA /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD4FE26F25947601009BC46D /* Project object */;
 }
