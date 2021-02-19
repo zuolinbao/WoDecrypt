@@ -15,6 +15,8 @@
 		CD4FE28A25947603009BC46D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27525947601009BC46D /* ContentView.swift */; };
 		CD4FE28B25947603009BC46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE27625947603009BC46D /* Assets.xcassets */; };
 		CD4FE28C25947603009BC46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE27625947603009BC46D /* Assets.xcassets */; };
+		CDFDBEF425AD8E7500B08650 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFDBEF325AD8E7500B08650 /* Algorithm.swift */; };
+		CDFDBEF525AD8E7500B08650 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFDBEF325AD8E7500B08650 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		CD4FE28325947603009BC46D /* WoDecrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoDecrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4FE28525947603009BC46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4FE28625947603009BC46D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CDFDBEF325AD8E7500B08650 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 				CD4FE27425947601009BC46D /* WoDecryptApp.swift */,
 				CD4FE27525947601009BC46D /* ContentView.swift */,
 				CD4FE27625947603009BC46D /* Assets.xcassets */,
+				CDFDBEF325AD8E7500B08650 /* Algorithm.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD4FE28925947603009BC46D /* ContentView.swift in Sources */,
+				CDFDBEF425AD8E7500B08650 /* Algorithm.swift in Sources */,
 				CD4FE28725947603009BC46D /* WoDecryptApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD4FE28A25947603009BC46D /* ContentView.swift in Sources */,
+				CDFDBEF525AD8E7500B08650 /* Algorithm.swift in Sources */,
 				CD4FE28825947603009BC46D /* WoDecryptApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
