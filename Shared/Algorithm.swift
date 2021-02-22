@@ -188,6 +188,51 @@ func canCarry(weights: [Int],days: Int,cap: Int) -> Bool {
 }
 
 
+func canPartition(nums: [Int]) -> Bool {
+    var sum = nums.reduce(0) {$0 + $1}
+    // 和为奇数时，不可能划分成两个和相等的集合
+    guard sum % 2 == 0 else {
+        return false
+    }
+    let n = nums.count
+    sum = sum / 2;
+    var dp = [[Bool]](repeating:[Bool](repeating: false, count: sum+1) , count: n+1)
+    // base case
+    for var line in dp {
+        line[0] = true
+    }
+    for i in 1...n {
+        for j in 1...sum {
+            if j - nums[i-1] < 0 {
+                // 背包容量不足，不能装入第 i 个物品
+                dp[i][j] = dp[i - 1][j];
+            } else {
+                // 装入或不装入背包
+                dp[i][j] = dp[i - 1][j] || dp[i - 1][j-nums[i-1]];
+            }
+        }
+    }
+    return dp[n][sum];
+}
+
+//
+func intervalSchedule(nums: [(Int,Int)]) -> Int {
+    let sortedNums = nums.sorted { (a, b) -> Bool in
+        return a.0 > b.0
+    }
+    var end = sortedNums.first!.1
+    return sortedNums.reduce(0) { (count, a) -> Int in
+        if a.0 > end {
+            end = a.1
+            return count + 1
+        } else {
+            return count
+        }
+    }
+    
+}
+
+
 
 
 
