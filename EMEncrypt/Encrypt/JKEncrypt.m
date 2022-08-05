@@ -64,6 +64,7 @@ static JKEncrypt* des;
 
 -(NSString*)decEncrypt:(NSString *)encryptStr{
     
+    encryptStr = [encryptStr stringByReplacingOccurrencesOfString:@"\\" withString:@""];
     NSData *encryptData = [GTMBase64 decodeData:[encryptStr dataUsingEncoding:NSUTF8StringEncoding]];
     
     size_t plainTextBufferSize = [encryptData length];

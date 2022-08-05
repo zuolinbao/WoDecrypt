@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CryptoSwift
 import EMEncrypt
 
 struct ContentView: View {

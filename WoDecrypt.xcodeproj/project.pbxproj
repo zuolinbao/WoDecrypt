@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,8 +20,6 @@
 		A318F71428517A8A00C617C5 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A318F70D28517A8A00C617C5 /* GTMDefines.h */; };
 		A318F71528517A8A00C617C5 /* RSA.h in Headers */ = {isa = PBXBuildFile; fileRef = A318F70E28517A8A00C617C5 /* RSA.h */; };
 		A318F71628517A8A00C617C5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A318F70F28517A8A00C617C5 /* GTMBase64.m */; };
-		CD37D19325A442770078CACA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD37D19225A442770078CACA /* CryptoSwift */; };
-		CD37D1BB25A47A810078CACA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD37D1BA25A47A810078CACA /* CryptoSwift */; };
 		CD4FE28725947603009BC46D /* WoDecryptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27425947601009BC46D /* WoDecryptApp.swift */; };
 		CD4FE28825947603009BC46D /* WoDecryptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27425947601009BC46D /* WoDecryptApp.swift */; };
 		CD4FE28925947603009BC46D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FE27525947601009BC46D /* ContentView.swift */; };
@@ -114,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD37D19325A442770078CACA /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A318F6FF28517A5A00C617C5 /* EMEncrypt.framework in Frameworks */,
-				CD37D1BB25A47A810078CACA /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +286,6 @@
 			);
 			name = "WoDecrypt (iOS)";
 			packageProductDependencies = (
-				CD37D19225A442770078CACA /* CryptoSwift */,
 			);
 			productName = "WoDecrypt (iOS)";
 			productReference = CD4FE27B25947603009BC46D /* WoDecrypt.app */;
@@ -312,7 +307,6 @@
 			);
 			name = "WoDecrypt (macOS)";
 			packageProductDependencies = (
-				CD37D1BA25A47A810078CACA /* CryptoSwift */,
 			);
 			productName = "WoDecrypt (macOS)";
 			productReference = CD4FE28325947603009BC46D /* WoDecrypt.app */;
@@ -352,7 +346,6 @@
 			);
 			mainGroup = CD4FE26E25947601009BC46D;
 			packageReferences = (
-				CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = CD4FE27C25947603009BC46D /* Products */;
 			projectDirPath = "";
@@ -821,30 +814,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CD37D19225A442770078CACA /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
-		};
-		CD37D1BA25A47A810078CACA /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD37D19125A442770078CACA /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD4FE26F25947601009BC46D /* Project object */;
 }
